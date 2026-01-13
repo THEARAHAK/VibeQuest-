@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -443,5 +443,167 @@
     <p>© 2026 VibeQuest • Live free • Stay curious</p>
     <p style="margin-top: 0.5rem; font-size: 0.9rem;">Made with ❤️ and good vibes</p>
   </footer>
+</body>
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeQuest | Adventure & Lifestyle</title>
+  <meta name="description" content="VibeQuest – Adventure & lifestyle journey. Exploring life, one vibe at a time." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.9)),
+                  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 1rem 0 2rem;
+      font-size: 1.2rem;
+      color: #cbd5f5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      background: #22c55e;
+      color: #022c22;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #16a34a; }
+
+    section {
+      padding: 5rem 10%;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #22c55e;
+    }
+
+    .about p {
+      max-width: 700px;
+      color: #e5e7eb;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #020617;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #22c55e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    .social a {
+      margin: 0 0.7rem;
+      font-weight: 600;
+      color: #22c55e;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 4rem 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>🌱 VibeQuest</h1>
+      <p>Exploring life, one vibe at a time</p>
+      <a href="#about" class="btn">Start the Journey</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Welcome to <strong>VibeQuest</strong>. This is my personal space where I share
+      adventures, lifestyle moments, and real experiences. From daily life to
+      spontaneous journeys, this platform is about freedom, growth, and positive vibes.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <section>
+    <h2 class="section-title">What I Share</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🌍 Adventure</h3>
+        <p>Travel stories, nature escapes, and new places waiting to be explored.</p>
+      </div>
+      <div class="card">
+        <h3>✨ Lifestyle</h3>
+        <p>Daily routines, mindset, creativity, and living intentionally.</p>
+      </div>
+      <div class="card">
+        <h3>🎥 Visual Stories</h3>
+        <p>Cinematic videos, reels, and moments captured through my lens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section>
+    <h2 class="section-title">Connect</h2>
+    <div class="social">
+      <a href="#">YouTube</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 VibeQuest • Live free • Stay curious
+  </footer>
+
 </body>
 </html>
