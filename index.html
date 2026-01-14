@@ -1,163 +1,276 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VibeQuest | Adventure & Lifestyle</title>
-  <meta name="description" content="VibeQuest – Adventure & lifestyle journey. Exploring life, one vibe at a time." />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VibeQuest | Adventure • Code • Lifestyle</title>
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.9)),
-                  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;
-      padding: 2rem;
-    }
+    <meta
+      name="description"
+      content="VibeQuest – Adventure, coding & lifestyle. Exploring the world and building ideas, one vibe at a time."
+    />
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    header p {
-      margin: 1rem 0 2rem;
-      font-size: 1.2rem;
-      color: #cbd5f5;
-    }
+    <style>
+      :root {
+        --bg: #0b1220;
+        --card: #020617;
+        --accent: #22c55e;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+      }
 
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      border-radius: 999px;
-      background: #22c55e;
-      color: #022c22;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .btn:hover { background: #16a34a; }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
 
-    section {
-      padding: 5rem 10%;
-    }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
 
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #22c55e;
-    }
+      /* ================= HERO ================= */
 
-    .about p {
-      max-width: 700px;
-      color: #e5e7eb;
-    }
+      header {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.95)),
+          url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+            center/cover no-repeat;
+      }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+      header img {
+        width: 90px;
+        margin-bottom: 1.2rem;
+      }
 
-    .card {
-      background: #020617;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
+      header h1 {
+        font-size: 3.3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
 
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: #22c55e;
-    }
+      header p {
+        margin: 1.3rem 0 2.6rem;
+        font-size: 1.15rem;
+        color: var(--muted);
+      }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #020617;
-      color: #94a3b8;
-    }
+      .btn {
+        padding: 0.9rem 2.4rem;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #022c22;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
 
-    .social a {
-      margin: 0 0.7rem;
-      font-weight: 600;
-      color: #22c55e;
-    }
+      .btn:hover {
+        background: #16a34a;
+        transform: translateY(-3px);
+      }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
-      section { padding: 4rem 6%; }
-    }
-  </style>
-</head>
-<body>
+      /* ================= SECTIONS ================= */
 
-  <!-- HERO -->
-  <header>
-    <div>
-      <h1>🌱 VibeQuest</h1>
-      <p>Exploring life, one vibe at a time</p>
-      <a href="#about" class="btn">Start the Journey</a>
-    </div>
-  </header>
+      section {
+        padding: 5.5rem 10%;
+      }
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
-    <p>
-      Welcome to <strong>VibeQuest</strong>. This is my personal space where I share
-      adventures, lifestyle moments, and real experiences. From daily life to
-      spontaneous journeys, this platform is about freedom, growth, and positive vibes.
-    </p>
-  </section>
+      .section-title {
+        font-size: 2.3rem;
+        margin-bottom: 2.2rem;
+        color: var(--accent);
+      }
 
-  <!-- CONTENT -->
-  <section>
-    <h2 class="section-title">What I Share</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🌍 Adventure</h3>
-        <p>Travel stories, nature escapes, and new places waiting to be explored.</p>
+      /* ================= ABOUT ================= */
+
+      .about p {
+        max-width: 760px;
+        color: var(--text);
+      }
+
+      /* ================= GRID ================= */
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2.2rem;
+      }
+
+      .card {
+        background: var(--card);
+        padding: 2rem;
+        border-radius: 1.3rem;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+        transition: all 0.35s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      .card h3 {
+        color: var(--accent);
+        margin-bottom: 0.8rem;
+      }
+
+      /* ================= BLOG ================= */
+
+      .blog-card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 0.9rem;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+      }
+
+      .blog-card span {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .blog-card h3 {
+        margin: 0.7rem 0;
+        font-size: 1.1rem;
+      }
+
+      /* ================= SOCIAL ================= */
+
+      .social a {
+        margin-right: 1.4rem;
+        font-weight: 600;
+        color: var(--accent);
+        transition: 0.2s;
+      }
+
+      .social a:hover {
+        opacity: 0.7;
+      }
+
+      /* ================= FOOTER ================= */
+
+      footer {
+        text-align: center;
+        padding: 2.2rem;
+        background: var(--card);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2.4rem;
+        }
+
+        section {
+          padding: 4.2rem 7%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HERO -->
+    <header>
+      <div>
+        <img src="t.png" alt="VibeQuest Logo" />
+        <h1>VibeQuest</h1>
+        <p>Adventure • Coding • Lifestyle</p>
+        <a href="#about" class="btn">Start the Journey</a>
       </div>
-      <div class="card">
-        <h3>✨ Lifestyle</h3>
-        <p>Daily routines, mindset, creativity, and living intentionally.</p>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I’m the creator of <strong>VibeQuest</strong> — a space where adventure
+        meets technology and real life. I explore places, build projects, write
+        code, and share honest moments from the journey. <br /><br />
+        Not just travel. Not just coding. This is a mindset.
+      </p>
+    </section>
+
+    <!-- CONTENT -->
+    <section>
+      <h2 class="section-title">What I Share</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🌍 Adventure</h3>
+          <p>Nature, sunsets, freedom, and discovering new environments.</p>
+        </div>
+        <div class="card">
+          <h3>💻 Coding</h3>
+          <p>
+            Building projects, learning systems, and creative problem solving.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🎥 Visual Stories</h3>
+          <p>Cinematic moments, photography, reels, and visual storytelling.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>🎥 Visual Stories</h3>
-        <p>Cinematic videos, reels, and moments captured through my lens.</p>
+    </section>
+
+    <!-- BLOG -->
+    <section>
+      <h2 class="section-title">Latest Blog</h2>
+      <div class="grid">
+        <div class="card blog-card">
+          <img src="w.png" alt="" />
+          <span>📅 Jan 2026</span>
+          <h3>Why I Mix Adventure & Coding</h3>
+          <p>Nature clears my mind. Code sharpens it.</p>
+        </div>
+
+        <div class="card blog-card">
+          <img src="y.png" alt="" />
+          <span>📅 Jan 2026</span>
+          <h3>Building Focus in a Distracted World</h3>
+          <p>Lessons learned from silence, nature, and code.</p>
+        </div>
+
+        <div class="card blog-card">
+          <img src="q.png" alt="" />
+          <span>📅 Jan 2026</span>
+          <h3>Building VibeQuest From Zero</h3>
+          <p>The mindset behind turning ideas into reality.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SOCIAL -->
-  <section>
-    <h2 class="section-title">Connect</h2>
-    <div class="social">
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-    </div>
-  </section>
+    <!-- SOCIAL -->
+    <section>
+      <h2 class="section-title">Connect With Me</h2>
+      <div class="social">
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">GitHub</a>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 VibeQuest • Live free • Stay curious
-  </footer>
-
-</body>
+    <!-- FOOTER -->
+    <footer>© 2026 VibeQuest • Live free • Build things • Stay curious</footer>
+  </body>
 </html>
-
